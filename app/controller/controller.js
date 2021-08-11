@@ -1,8 +1,18 @@
 const userController = require('../services/service.js');
+const validInput = require('../middleware/validation.js');
 
 class UserController {
     registerUser = (req, res) => {
         try {
+            const userInputValidation = validInput.validate(req.body);
+            if (userInputValidation.error) {
+                return res.status(400).send({
+                  success: false,
+                  message: userInputValidation.error.details[0].message,
+                  data: req.body,
+                });
+              }
+
             userController.registerUser(req.body, (err, userData) => {
                 if (err) {
                     return res.status(500).send({
