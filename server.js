@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 // create express app
 const app = express();
@@ -11,19 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 const dbConfig = require('./config/user.config.js');
-
-mongoose.Promise = global.Promise;
-
-// Connecting to the database
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+dbConfig.dbConnection();
 
 // define a simple route
 app.get('/', (req, res) => {
@@ -33,6 +22,6 @@ app.get('/', (req, res) => {
 require('./app/routes/route.js')(app);
 
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(process.env.PORT, () => {
+    console.log(`Server is listening on port ${process.env.PORT}`);
 });
