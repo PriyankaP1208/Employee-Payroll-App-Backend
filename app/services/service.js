@@ -10,5 +10,21 @@ class UserService {
             return callback(error, null);
         }
     }
+
+    loginUser = (loginDetails, callback) => {
+        try {
+            userService.userLogin(loginDetails, (err, data) => {
+                if(err)
+                {
+                    return callback(err, null);
+                }
+                else{
+                    return callback(null, data);
+                }
+            });
+        } catch (error) {
+            return callback(error, null);
+        }
+    }
 }
 module.exports = new UserService();

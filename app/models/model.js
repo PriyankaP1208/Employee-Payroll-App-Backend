@@ -39,6 +39,22 @@ class UserRegistrationAndLogin {
             return (error, null);
         }
     }
+
+    userLogin=(loginDetails, callback) => {
+        try {
+        userModel.findOne({emailId: loginDetails.emailId}, (error, data) => {
+            if(error) {
+                return callback(error, null);
+            } else if (!data) {
+                return callback ("User doesn't exist", null);
+            }
+            else
+                return callback(null, data);
+            });
+        }catch(error){
+        return(error, null);
+        }
+    }
 }
 
 module.exports = new UserRegistrationAndLogin();
