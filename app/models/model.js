@@ -13,7 +13,8 @@ const UserSchema = mongoose.Schema({
     },
     emailId:{
         type:String,
-        require:true
+        require:true,
+        unique:true
     },
     password:{
         type:String,
@@ -31,7 +32,7 @@ UserSchema.pre('save', function (next) {
     });
   });
 
-const userModel = mongoose.model('User', UserSchema);
+const userModel = mongoose.model('users', UserSchema);
 
 class UserRegistrationAndLogin {
     addUser=(userData, callback)=> {

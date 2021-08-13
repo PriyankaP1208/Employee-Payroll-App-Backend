@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config()
 const mongoose = require('mongoose');
 
 exports.dbConnection = ()=> {
@@ -9,7 +9,9 @@ exports.dbConnection = ()=> {
     // Connecting to the database
     mongoose.connect(url, {
         useNewUrlParser: true,
-        useUnifiedTopology:true
+        useUnifiedTopology:true,
+        useCreateIndex : true,  
+        useFindAndModify : false
     }).then(() => {
         console.log("Successfully connected to the database");
     }).catch(err => {

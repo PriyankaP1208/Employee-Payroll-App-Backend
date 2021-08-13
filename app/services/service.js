@@ -14,14 +14,13 @@ class UserService {
 
     loginUser = (loginDetails, callback) => {
         try {
-            
             userService.userLogin(loginDetails, (err, data) => {
                 if(err)
                 {
                     return callback(err, null);
                 }
                 const token = userHelper.generateAccessToken(loginDetails);
-                return callback(null, token);
+                return callback(null,token);
             });
         } catch (error) {
             return callback(error, null);

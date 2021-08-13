@@ -1,6 +1,10 @@
+const e = require('express');
 const jwt = require('jsonwebtoken');
 
-exports.generateAccessToken=(data)=>{
+class Helper {
+    generateAccessToken(data){
         return jwt.sign(data, process.env.TOKEN_SECRET);
+    }
 }
 
+module.exports = new Helper();

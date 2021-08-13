@@ -1,5 +1,6 @@
 const userController = require('../services/service.js');
 const validInput = require('../middleware/validation.js');
+const { message } = require('../middleware/validation.js');
 
 class UserController {
     registerUser = (req, res) => {
@@ -8,27 +9,38 @@ class UserController {
             if (userInputValidation.error) {
                 return res.status(400).send({
                   success: false,
-                  message: userInputValidation.error.details[0].message,
+                  message: userInputValidation.error,
                   data: req.body,
                 });
               }
 
-            userController.registerUser(req.body, (err, userData) => {
+              const user = {
+                  firstName:req.body.firstName,
+                  lastName:req.body.lastName,
+                  emailId:req.body.emailId,
+                  password:req.body.password
+              };
+            userController.registerUser(user, (err, userData) => {
                 if (err) {
                     return res.status(500).send({
                         sucess:false,
                         message: err.message || "Some error occurred"
                     });
                 }
-                res.status(201).send({
+                else
+                {
+                    res.status(201).send({
                     success:true,
                     data:userData,
                     message:"Registered Successfully"
-                });
+                    });
+                }   
             });
-
         } catch (error) {
-            return res.send({ message: error.message });
+            return res.status(500).send({
+                success:false,
+                message:error.message || "Some error occured",
+            });
         }
     }
 
