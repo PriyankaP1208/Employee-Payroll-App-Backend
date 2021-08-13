@@ -9,7 +9,7 @@ class UserController {
             if (userInputValidation.error) {
                 return res.status(400).send({
                   success: false,
-                  message: userInputValidation.error,
+                  message: "Enter valid details",
                   data: req.body,
                 });
               }
@@ -52,7 +52,7 @@ class UserController {
             });
 
             userController.loginUser(userDetails, (err, data) => {
-                return err ? res.status(400).send({success:false,message:err})
+                return err ? res.status(400).send({success:false,message:"User not found"})
                    : res.status(200).send({success:true,message:"Login Successful",data:data});
             });
         }catch(error) {

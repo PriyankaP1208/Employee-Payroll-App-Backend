@@ -1,5 +1,7 @@
 const userService = require('../models/model.js');
 const userHelper = require('../middleware/helper.js');
+const bcrypt = require('bcrypt');
+//const { id } = require('../middleware/validation.js');
 
 class UserService {
     registerUser = (userData, callback) => {
@@ -13,11 +15,14 @@ class UserService {
     }
 
     loginUser = (loginDetails, callback) => {
+        userService.userLogin(loginDetails, (err, data) => {
         try {
             userService.userLogin(loginDetails, (err, data) => {
                 if(err)
                 {
                     return callback(err, null);
+                }else if(!(bcrypt.compareSync(loginDetails.password, data.password))){
+                    return callback("Check password", null);
                 }
                 const token = userHelper.generateAccessToken(loginDetails);
                 return callback(null,token);
@@ -25,6 +30,7 @@ class UserService {
         } catch (error) {
             return callback(error, null);
         }
-    }
+    });
+}
 }
 module.exports = new UserService();
