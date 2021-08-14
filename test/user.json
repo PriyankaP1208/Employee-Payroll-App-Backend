@@ -47,5 +47,15 @@
     "loginFalsePassword":{
         "emailId":"priya123@gmail.com",
         "password":"Priy123"
+    },
+
+    "loginNoEmail":{
+        "emailId":"",
+        "password":"Priy123"
+    },
+
+    "loginNoPassword":{
+        "emailId":"priya123@gmail.com",
+        "password":""
     }
 }

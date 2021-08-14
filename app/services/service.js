@@ -15,14 +15,14 @@ class UserService {
     }
 
     loginUser = (loginDetails, callback) => {
-        userService.userLogin(loginDetails, (err, data) => {
         try {
             userService.userLogin(loginDetails, (err, data) => {
                 if(err)
                 {
                     return callback(err, null);
-                }else if(!(bcrypt.compareSync(loginDetails.password, data.password))){
-                    return callback("Check password", null);
+                }
+                else if(!(bcrypt.compareSync(loginDetails.password, data.password))){
+                   return callback("Check password", null);
                 }
                 const token = userHelper.generateAccessToken(loginDetails);
                 return callback(null,token);
@@ -30,7 +30,6 @@ class UserService {
         } catch (error) {
             return callback(error, null);
         }
-    });
-}
+    }
 }
 module.exports = new UserService();

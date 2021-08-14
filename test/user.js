@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../server.js');
-const user = require('./employee.json');
+const user = require('./user.json');
 
 chai.should();
 chai.use(chaiHttp);
@@ -17,7 +17,6 @@ describe('registerUser', ()=>{
                     return done(error);
                 }
                 res.should.have.status(201);
-                res.body.should.be.a('object');
                 res.body.should.have.property("success").eql(true);
                 res.body.should.have.property("message").eql("Registered Successfully");
                 return done();
@@ -34,7 +33,6 @@ describe('registerUser', ()=>{
                         return done(error);
                     }
                     res.should.have.status(400);
-                    res.body.should.be.a('object');
                     res.body.should.have.property("success").eql(false);
                     res.body.should.have.property("message").eql("Enter valid details");
                     return done();
@@ -51,7 +49,6 @@ describe('registerUser', ()=>{
                         return done(error);
                     }
                     res.should.have.status(400);
-                    res.body.should.be.a('object');
                     res.body.should.have.property("success").eql(false);
                     res.body.should.have.property("message").eql("Enter valid details");
                     return done();
@@ -68,7 +65,6 @@ describe('registerUser', ()=>{
                     return done(error);
                 }
                 res.should.have.status(400);
-                res.body.should.be.a('object');
                 res.body.should.have.property("success").eql(false);
                 res.body.should.have.property("message").eql("Enter valid details");
                 return done();
@@ -85,7 +81,6 @@ describe('registerUser', ()=>{
                     return done(error);
                 }
                 res.should.have.status(400);
-                res.body.should.be.a('object');
                 res.body.should.have.property("success").eql(false);
                 res.body.should.have.property("message").eql("Enter valid details");
                 return done();
@@ -144,4 +139,38 @@ describe('loginUser', ()=>{
                 return done();
             });
         });
+
+    it('givenIfNoEmailId_shouldFailToLogin', (done) => {
+        const userData = user.loginNoEmail;
+        chai.request(server)
+            .post('/login')
+            .send(userData)
+            .end((error ,res) => {
+                if(error){
+                    return done(error);
+                }
+                res.should.have.status(400);
+                res.body.should.be.a('object');
+                res.body.should.have.property("success").eql(false);
+                res.body.should.have.property("message").eql("User not found");
+                return done();
+            });
+    });
+
+    it('givenIfNoPassword_shouldFailToLogin', (done) => {
+        const userData = user.loginNoPassword;
+        chai.request(server)
+            .post('/login')
+            .send(userData)
+            .end((error ,res) => {
+                if(error){
+                    return done(error);
+                }
+                res.should.have.status(400);
+                res.body.should.be.a('object');
+                res.body.should.have.property("success").eql(false);
+                res.body.should.have.property("message").eql("Password can not be empty");
+                return done();
+            });
+    });
 });

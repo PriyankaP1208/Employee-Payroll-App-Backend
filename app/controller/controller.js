@@ -46,6 +46,9 @@ class UserController {
 
     loginUser = (req, res) => {
         try {
+            if(!req.body.password){
+                return res.status(400).send({success:false,message:"Password can not be empty"});
+            }
             const userDetails = ({
                 emailId:req.body.emailId,
                 password:req.body.password
