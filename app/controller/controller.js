@@ -1,12 +1,14 @@
 const userController = require('../services/service.js');
 const validInput = require('../middleware/validation.js');
 const { message } = require('../middleware/validation.js');
+const logger = require('../../config/logers.js');
 
 class UserController {
     registerUser = (req, res) => {
         try {
             const userInputValidation = validInput.validate(req.body);
             if (userInputValidation.error) {
+                logger.error('Invalid details');
                 return res.status(400).send({
                   success: false,
                   message: "Enter valid details",
@@ -22,6 +24,7 @@ class UserController {
               };
             userController.registerUser(user, (err, userData) => {
                 if (err) {
+                    logger.error('Some error occured');
                     return res.status(500).send({
                         sucess:false,
                         message: err.message || "Some error occurred"
@@ -29,6 +32,7 @@ class UserController {
                 }
                 else
                 {
+                    logger.info('User registered successfully')
                     res.status(201).send({
                     success:true,
                     data:userData,
@@ -37,6 +41,7 @@ class UserController {
                 }   
             });
         } catch (error) {
+            logger.error('Some error occured');
             return res.status(500).send({
                 success:false,
                 message:error.message || "Some error occured",

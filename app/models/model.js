@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const logger = require('../../config/logers.js');
 const bcrypt = require('bcrypt');
 
 const UserSchema = mongoose.Schema({
@@ -55,12 +55,17 @@ class UserRegistrationAndLogin {
         try {
         userModel.findOne({emailId: loginDetails.emailId}, (error, data) => {
             if(error) {
+                logger.error('Some error occured');
                 return callback(error, null);
             } else if (!data) {
+                logger.error('User not found');
                 return callback ("User doesn't exist", null);
             }
             else
+            {
+                logger.info('EmailId is matched');
                 return callback(null, data);
+            }
             });
         }catch(error){
         return(error, null);
