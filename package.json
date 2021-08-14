@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "keywords": [
     "Express",
@@ -27,7 +27,8 @@
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^9.0.3",
-    "mongoose": "^5.13.5"
+    "mongoose": "^5.13.5",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

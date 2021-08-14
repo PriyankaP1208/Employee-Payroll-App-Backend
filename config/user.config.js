@@ -1,5 +1,6 @@
 require('dotenv').config()
 const mongoose = require('mongoose');
+const logger = require('../config/logers.js')
 
 exports.dbConnection = ()=> {
     mongoose.Promise = global.Promise;
@@ -14,8 +15,9 @@ exports.dbConnection = ()=> {
         useFindAndModify : false
     }).then(() => {
         console.log("Successfully connected to the database");
-    }).catch(err => {
-        console.log('Could not connect to the database. Exiting now...', err);
+    }).catch((error) => {
+        console.log('Could not connect to the database. Exiting now...',error);
+        logger.error('Could not connect to the database');
         process.exit();
     });
 
