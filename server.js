@@ -1,6 +1,8 @@
 const express = require('express');
 require('dotenv').config()
 const logger = require('./config/logers.js');
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = require('./swagger/swagger.json');
 
 // create express app
 const app = express();
@@ -10,6 +12,10 @@ app.use(express.urlencoded({ extended: true }))
 
 // parse requests of content-type - application/json
 app.use(express.json())
+
+app.use(
+    '/swagger', swaggerUI.serve, swaggerUI.setup(swaggerDocument)
+  );
 
 const dbConfig = require('./config/user.config.js');
 dbConfig.dbConnection();

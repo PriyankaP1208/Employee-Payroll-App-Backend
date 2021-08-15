@@ -3,3 +3,27 @@
 {"message":"User registered successfully","level":"info","timestamp":"2021-08-14T09:13:07.013Z"}
 {"message":"EmailId is matched","level":"info","timestamp":"2021-08-14T09:13:20.284Z"}
 {"message":"EmailId is matched","level":"info","timestamp":"2021-08-14T09:13:42.384Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-14T09:19:47.443Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-14T09:19:47.510Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-14T09:19:47.523Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-14T09:19:47.533Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-14T09:19:47.543Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-14T09:19:47.572Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-14T09:19:47.698Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-14T09:19:47.708Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-14T09:19:47.832Z"}
+{"message":"Welcome to Employee Payroll Application","level":"info","timestamp":"2021-08-15T04:42:29.013Z"}
+{"message":"Welcome to Employee Payroll Application","level":"info","timestamp":"2021-08-15T04:58:00.566Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-15T05:09:30.546Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-15T05:35:13.594Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-15T05:56:27.873Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-15T05:57:11.344Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-15T05:57:28.614Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-15T05:57:44.287Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-15T05:58:52.785Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-15T05:59:19.818Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-15T05:59:27.792Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-15T06:00:01.091Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-15T06:20:40.092Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-15T06:21:20.953Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-15T06:21:30.503Z"}
