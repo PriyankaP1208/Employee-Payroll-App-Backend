@@ -4,7 +4,7 @@ const { message } = require('../middleware/validation.js');
 const logger = require('../../config/logers.js');
 
 class UserController {
-    registerUser = (req, res) => {
+    registerUser=(req, res)=>{
         try {
             const userInputValidation = validInput.validate(req.body);
             if (userInputValidation.error) {
@@ -49,7 +49,7 @@ class UserController {
         }
     }
 
-    loginUser = (req, res) => {
+    loginUser=(req, res)=>{
         try {
             if(!req.body.password){
                 return res.status(400).send({success:false,message:"Password can not be empty"});
