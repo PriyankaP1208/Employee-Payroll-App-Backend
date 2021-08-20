@@ -29,5 +29,8 @@
 {"message":"User not found","level":"error","timestamp":"2021-08-16T02:38:39.838Z"}
 {"message":"User not found","level":"error","timestamp":"2021-08-16T02:38:40.012Z"}
 {"message":"Invalid details","level":"error","timestamp":"2021-08-16T02:45:08.217Z"}
+<<<<<<< HEAD
 {"message":"Could not connect to the database","level":"error","timestamp":"2021-08-16T14:53:50.759Z"}
 {"message":"Could not connect to the database","level":"error","timestamp":"2021-08-18T02:42:48.214Z"}
+=======
+>>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56

@@ -13,7 +13,12 @@ const UserSchema = mongoose.Schema({
 	},
 	emailId:{
 		type:String,
+<<<<<<< HEAD
 		required:true
+=======
+		required:true,
+		unique:true
+>>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56
 	},
 	password:{
 		type:String,
