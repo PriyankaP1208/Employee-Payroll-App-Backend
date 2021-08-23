@@ -1,24 +1,19 @@
 module.exports = (app) => {
 	const user = require("../controller/controller.js");
-<<<<<<< HEAD
 	const employee = require("../controller/employee");
-=======
->>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56
-
+	const helper = require("../middleware/helper");
+	
 	app.post("/register", user.registerUser);
 
 	app.post("/login", user.loginUser);
-<<<<<<< HEAD
 
-	app.post("/addEmployee", employee.createEmployee);
+	app.post("/addEmployee", helper.verifyToken, employee.createEmployee);
 
-	app.get("/getEmployees", employee.getAllEmployees);
+	app.get("/getEmployees", helper.verifyToken, employee.getAllEmployees);
 
-	app.get("/getById/:empId", employee.getOne);
+	app.get("/getById/:empId", helper.verifyToken, employee.getOne);
 
-	app.put("/updateById/:empId", employee.updateEmployee);
+	app.put("/updateById/:empId", helper.verifyToken, employee.updateEmployee);
 
-	app.delete("/deleteEmployee/:empId", employee.removeEmployee);
-=======
->>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56
+	app.delete("/deleteEmployee/:empId", helper.verifyToken, employee.removeEmployee);
 };

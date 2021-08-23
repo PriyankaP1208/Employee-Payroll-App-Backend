@@ -69,12 +69,51 @@
               }
             }
         }
-<<<<<<< HEAD
-  }
-=======
+    },
+    "/addEmployee": {
+      "post": {
+        "tags": ["Add Employee"],
+        "description": "Create new employee",
+        "parameters": [
+          {
+            "name": "Add Employee",
+            "in": "body",
+            "description": "Create new employee",
+            "schema": {
+              "$ref": "#/definitions/Employee"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "201": {
+            "description": "New user is Registered"
+          },
+          "500": {
+            "description": "Some error occured"
+          }
+        }
+      }
+    },
+    "/getEmployees": {
+      "get": {
+        "tags": ["Get Employee"],
+        "description": "Retrieve all employees",
+        "parameters": [
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Retrieved all employees"
+          },
+          "500": {
+            "description": "Some error occured"
+          }
+        }
+      }
     }
->>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56
 },
+
 "definitions": {
     "User": {
       "type":"object",
@@ -103,10 +142,30 @@
                 "type": "string"
                 }
             }
+        
+    },
+    "Employee":{
+      "type":"object",
+      "properties":{
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "emailId": {
+          "type": "string"
+        },
+        "gender":{
+          "type":"string"
+        },
+        "salary":{
+          "type":"string"
+        },
+        "department":{
+          "type":"string"
         }
-<<<<<<< HEAD
-  }
-=======
+      }
     }
->>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56
+}
 }

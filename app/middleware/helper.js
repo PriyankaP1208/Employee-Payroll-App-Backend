@@ -1,20 +1,36 @@
-<<<<<<< HEAD
-//const express = require("express");
+//const e = require("express");
 const jwt = require("jsonwebtoken");
 
 class Helper {
 	generateAccessToken(data){
-		return jwt.sign(data, process.env.TOKEN_SECRET);
+		return jwt.sign(data, process.env.TOKEN_SECRET, {
+			expiresIn:"5000s",
+		});
 	}
-=======
-const e = require('express');
-const jwt = require('jsonwebtoken');
 
-class Helper {
-    generateAccessToken(data){
-        return jwt.sign(data, process.env.TOKEN_SECRET);
-    }
->>>>>>> b027bc54fb2b5ea2d45793472191261c646dbc56
+	verifyToken(req, res, next) {
+		let token = req.get("token");
+		if(token)
+		{
+			jwt.verify(token, process.env.TOKEN_SECRET, (error) => {
+				if(error){
+					return res.status(400).send({
+						success: false,
+						message:"Invalid token!"
+					});
+				}
+				else {
+					next();
+				}
+			});
+		}else {
+			return res.status(401).send({
+				success: false,
+				message:"Unauthorized token",
+			});
+		}
+	}
 }
+
 
 module.exports = new Helper();
