@@ -84,7 +84,7 @@
             }
           }
         ],
-        "produces": ["application/json"],
+        
         "responses": {
           "201": {
             "description": "New user is Registered"
@@ -92,7 +92,12 @@
           "500": {
             "description": "Some error occured"
           }
-        }
+        },
+        "security":[
+          {
+            "JWT":[]
+          }
+        ]
       }
     },
     "/getEmployees": {

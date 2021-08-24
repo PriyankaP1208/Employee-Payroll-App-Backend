@@ -35,13 +35,13 @@
     },
 
     "userLogin":{
-        "emailId":"priya123@gmail.com",
-        "password":"Priya@123"
+        "emailId":"priya1234@gmail.com",
+        "password":"Priya@1234"
     },
 
     "loginFalseEmailId":{
-        "emailId":"priya123gmail.com",
-        "password":"Priya@123"
+        "emailId":"priya1234gmail.com",
+        "password":"Priya@1234"
     },
 
     "loginFalsePassword":{
@@ -57,5 +57,83 @@
     "loginNoPassword":{
         "emailId":"priya123@gmail.com",
         "password":""
+    },
+
+    "employeeData":{
+        "firstName":"Priya",
+        "lastName":"Patil",
+        "emailId":"ppriyapatil12@gmail.com",
+        "gender":"Female",
+        "salary":"340000",
+        "department":"Developer"
+    },
+
+    "employeeWrongName":{
+        "firstName":"priya",
+        "lastName":"Patil",
+        "emailId":"ppriyapatil12@gmail.com",
+        "gender":"Female",
+        "salary":"340000",
+        "department":"Developer"
+    },
+
+    "employeeNoName":{
+        "firstName":"",
+        "lastName":"Patil",
+        "emailId":"ppriyagmail.com",
+        "gender":"Female",
+        "salary":"340000",
+        "department":"Developer"
+    },
+    
+    "employeeWrongMailId":{
+        "firstName":"priya",
+        "lastName":"Patil",
+        "emailId":"ppriyagmail.com",
+        "gender":"Female",
+        "salary":"340000",
+        "department":"Developer"
+    },
+
+    "employeeNoMailId":{
+        "firstName":"priya",
+        "lastName":"Patil",
+        "emailId":"",
+        "gender":"Female",
+        "salary":"340000",
+        "department":"Developer"
+    },
+
+    "employeeNoGender":{
+        "firstName":"priya",
+        "lastName":"Patil",
+        "emailId":"",
+        "gender":"",
+        "salary":"340000",
+        "department":"Developer"
+    },
+
+    "getEmployeeById":{
+        "id":"612532d4e1e75a3370d44075"
+    },
+
+    "getWrongEmployeeId":{
+        "id":"612532d4"
+    },
+
+    "updateEmployeeDetails":{
+        "id":"6125383c7b6e66329c75d067"
+    },
+
+    "updateWrongId":{
+        "id":"6125383c"
+    },
+
+    "deleteEmployeeDetails":{
+        "id":"6125383c7b6e66329c75d067"
+    },
+
+    "deleteWrongId":{
+        "id":"612538"
     }
 }

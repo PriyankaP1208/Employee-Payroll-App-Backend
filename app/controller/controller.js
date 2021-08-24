@@ -60,7 +60,7 @@ class UserController {
 
 			userController.loginUser(userDetails, (err, data) => {
 				return err ? res.status(400).send({success:false,message:"User not found"})
-					: res.status(200).send({success:true,message:"Login Successful",data:data});
+					: res.status(200).send({success:true,message:"Login Successful",token:data});
 			});
 		}catch(error) {
 			return res.send({ message: error.message });

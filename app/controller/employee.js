@@ -1,7 +1,17 @@
 const employeeService = require("../services/employee");
+const validInput = require("../middleware/employeeValidation");
 
 class EmployeeController {
 	createEmployee(req, res) {
+		const userInputValidation = validInput.validate(req.body);
+		if (userInputValidation.error) {
+			return res.status(400).send({
+				success: false,
+				message: "Enter valid details",
+				data: req.body,
+			});
+		}
+		
 		const employee={
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
