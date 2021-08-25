@@ -1248,3 +1248,36 @@
 {"message":"EmailId is matched","level":"info","timestamp":"2021-08-24T18:44:50.754Z"}
 {"message":"EmailId is matched","level":"info","timestamp":"2021-08-24T18:44:51.061Z"}
 {"message":"EmailId is matched","level":"info","timestamp":"2021-08-24T18:44:51.363Z"}
+{"message":"Some error occured","level":"error","timestamp":"2021-08-24T19:15:17.870Z"}
+{"message":"Some error occured","level":"error","timestamp":"2021-08-24T19:15:36.020Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-24T19:15:45.496Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-24T19:16:19.311Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-25T01:13:56.725Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-25T01:14:35.833Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-25T01:19:12.166Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:13.589Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:25.083Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:36.963Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:44.723Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-25T02:05:14.086Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-25T02:05:23.271Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.604Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.733Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.773Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.806Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:40.888Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:40.960Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:41.007Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:41.050Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:39:34.299Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.784Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.903Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.914Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.927Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.030Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.121Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.164Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.203Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.399Z"}
+{"message":"User registered successfully","level":"info","timestamp":"2021-08-25T03:09:35.230Z"}
+{"message":"EmailId is matched","level":"info","timestamp":"2021-08-25T03:10:03.570Z"}

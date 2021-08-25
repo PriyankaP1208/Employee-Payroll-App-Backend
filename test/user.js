@@ -196,20 +196,20 @@ describe("Employee Payroll API", () => {
 
 
 describe("Add Employee", ()=> {
-  // it("givenDataIsValid_shouldCreateNewEmployee", (done) => {
-  //   const userData = user.employeeData;
-  //   chai.request(server)
-  //     .post("/addEmployee")
-  //     .send(userData)
-  //     .set('token', token )
-  //     .end((error, res) => {
-  //       res.should.have.status(201);
-  //       res.body.should.have.property('success').eql(true);
-  //       res.body.should.have.property('message').eql('Employee Created Successfully');
-  //       res.body.should.have.property('data');
-  //       done();
-  //     });
-  // });
+  it("givenDataIsValid_shouldCreateNewEmployee", (done) => {
+    const userData = user.employeeData;
+    chai.request(server)
+      .post("/addEmployee")
+      .send(userData)
+      .set('token', token )
+      .end((error, res) => {
+        res.should.have.status(201);
+        res.body.should.have.property('success').eql(true);
+        res.body.should.have.property('message').eql('Employee Created Successfully');
+        res.body.should.have.property('data');
+        done();
+      });
+  });
 
   it("givenNameIsInValid_shouldFailToCreateNewEmployee", (done) => {
     const userData = user.employeeWrongName;

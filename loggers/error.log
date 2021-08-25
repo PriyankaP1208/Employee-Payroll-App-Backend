@@ -629,3 +629,27 @@
 {"message":"Invalid details","level":"error","timestamp":"2021-08-24T18:44:47.242Z"}
 {"message":"User not found","level":"error","timestamp":"2021-08-24T18:44:47.689Z"}
 {"message":"User not found","level":"error","timestamp":"2021-08-24T18:44:48.005Z"}
+{"message":"Some error occured","level":"error","timestamp":"2021-08-24T19:15:17.875Z"}
+{"message":"Some error occured","level":"error","timestamp":"2021-08-24T19:15:36.021Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:13.590Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:25.083Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:36.963Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:04:44.724Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.616Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.737Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.776Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T02:38:40.810Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:40.891Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:40.963Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:41.010Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:38:41.053Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T02:39:34.301Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.786Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.904Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.915Z"}
+{"message":"Invalid details","level":"error","timestamp":"2021-08-25T03:06:27.928Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.030Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.121Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.165Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.203Z"}
+{"message":"User not found","level":"error","timestamp":"2021-08-25T03:06:28.399Z"}

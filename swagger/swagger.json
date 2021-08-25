@@ -31,7 +31,6 @@
                 }
               }
             ],
-            "produces": ["application/json"],
             "responses": {
               "201": {
                 "description": "New user is Registered"
@@ -59,7 +58,6 @@
                 }
               }
             ],
-            "produces": ["application/json"],
             "responses": {
               "200": {
                 "description": "Login Successfuly"
@@ -72,7 +70,7 @@
     },
     "/addEmployee": {
       "post": {
-        "tags": ["Add Employee"],
+        "tags": [],
         "description": "Create new employee",
         "parameters": [
           {
@@ -106,7 +104,6 @@
         "description": "Retrieve all employees",
         "parameters": [
         ],
-        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "Retrieved all employees"
@@ -114,9 +111,116 @@
           "500": {
             "description": "Some error occured"
           }
-        }
+        },
+        "security":[
+          {
+            "JWT":[]
+          }
+        ]
       }
+    },
+
+    "/getById/{empId}":{
+      "get": {
+        "tags": ["Get Employee"],
+        "description": "Retrieve employee by Id",
+        "parameters": [
+          {
+            "name": "empId",
+            "in": "path",
+            "type":"string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved all employees"
+          },
+          "400": {
+            "description":"Bad Request"
+          }
+      },
+      "security":[
+        {
+          "JWT":[]
+        }
+      ]
     }
+  },
+
+  "/updateById/{empId}":{
+    "put":{
+      "tags": ["Update Employee"],
+      "description": "Update Employee Data",
+      "parameters": [
+        {
+          "name": "empId",
+          "in": "path",
+          "type":"string"
+        },
+        {
+          "name": "Update Employee Details",
+          "in": "body",
+          "schema": {
+            "$ref": "#/definitions/Employee"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Retrieved all employees"
+        },
+        "400": {
+          "description":"Bad Request"
+        },
+        "500":{
+          "description":"Internal Server Error"        
+        }
+    },
+    "security":[
+      {
+        "JWT":[]
+      }
+    ]
+  }
+},
+
+"/deleteEmployee/{empId}":{
+  "delete":{
+    "tags": ["Delete Employee"],
+    "description": "Delete Employee Data",
+    "parameters": [
+      {
+        "name": "empId",
+        "in": "path",
+        "type":"string"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved all employees"
+      },
+      "400": {
+        "description":"Bad Request"
+      },
+      "500":{
+        "description":"Internal Server Error"        
+      }
+    },
+    "security":[
+      {
+        "JWT":[]
+      }
+    ]
+  }
+}
+},
+    
+"securityDefinitions":{
+  "JWT":{
+    "type": "apiKey",
+    "name": "token",
+    "in":"Headers"
+  }
 },
 
 "definitions": {
@@ -172,5 +276,8 @@
         }
       }
     }
+  }
 }
-}
+
+
+
